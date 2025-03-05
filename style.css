@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Orbitron&display=swap');
+
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('AmericanTypewriterRegular/AmericanTypewriterRegular.ttf') format('truetype');
+    /* Agrega otros formatos si los tienes, como woff o otf */
+}
+
+body {
+    width: 980px;
+    background: url(recursos/img/arena.png) no-repeat 65% 70px, /* las dos imagenes de fondo */
+    url(recursos/img/texture.png);
+
+    
+    margin: 0 auto; /* Centra el body horizontalmente */
+    margin-top: 30px;
+}
+
+    .div { /* Contenedor donde irá todo el contenido menos el header  */
+    border: 1px solid grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+header h1 { 
+    text-transform: uppercase; /* todas las letras en mayusculas */
+    color: orangered; 
+    text-shadow: 
+        2px 2px 2px lightyellow,  /* le doy sombras de dos colores al titulo */
+        2px 3px 2px orangered;
+    display: inline; /* para que no haya problemas con el nav*/
+    font-family: 'Orbitron', sans-serif; /* familia orbitron*/
+    font-size: x-large; /* agrando el tamaño del texto*/
+}
+
+nav {
+    display: inline; /* para que no haya problemas con el y con el h1*/
+}
+
+header:first-of-type {
+    width: 100%; /* ocupará el 100% del ancho del body */
+}
+
+nav a { /* enlaces dentro del nav, no hay mucho que comentar aqui*/
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(120, 120, 120);
+    font-weight: bold; /* negrita */
+    font-size: larger; /* tamaño del texto */
+}
+
+
+ body section:first-of-type > span:nth-child(2) > h1:nth-child(1){ /* primer h1 del segundo span, incluido en el primer section del body*/
+    color: orangered;
+    font-family: 'Orbitron', sans-serif; /* familia orbitron*/
+    
+    display: inline-block;
+    margin-left: 0px;
+
+    
+}
+
+body section:first-of-type > span:first-child { /* primer span del primer section del body, donde estará la imagen*/
+    background: url(recursos/img/clocks.jpg) no-repeat; /* imagen de fondo sin repetirse*/
+    margin: 0; /* ningun margen*/
+    width: 589px;
+    display: inline-block; /* para que no haya problemas con el segundo span*/
+    height: 272px;
+    border: 15px solid rgba(200, 200, 200, 0.5); /* borde de la imagen*/
+    margin-top: 30px;
+    margin-left: 20px;
+    
+}
+
+body section:first-of-type > span:nth-child(2) {
+    width: 310px;
+    display: inline-block; /* para que no haya problemas con el primer span*/
+    margin-left: 10px;
+    vertical-align: top; /* Añadí vertical-align: top para alinear al principio */
+    height: 300px;
+}
+
+
+body section:first-of-type > span:nth-child(2) > h1 { 
+   
+    font-size: 34px; /* tamaño del h1 del segundo span*/
+
+    }
+
+body section:first-of-type > span:nth-child(2) > span { /* span para texto, dentro del segundo span. Elegí un <span> en vez de <p> por sus propiedades*/
+   
+    margin-top: -20px;
+    display: flex; /* para que sea flexible*/
+    font-family: 'Arial', sans-serif;
+    color: grey;
+    
+    }
+
+body section:first-of-type > span:nth-child(2) > div > h3 { /* "boton" del segundo span, el cual esta dentro de un <div> */
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+    
+    
+}
+
+body section:first-of-type > span:nth-child(2) > div {
+    border: 1px solid orangered;
+    border-radius: 20px 20px 20px 20px;
+    background-color: orangered;
+    height: 45px;
+    margin-top: 10px;
+    box-shadow: inset 0px -5px 10px rgba(50, 50, 50, 1); /* Sombra interna en la parte inferior */
+}
+
+ 
+}
+
+body section:nth-of-type(2)  { /* propiedades del segundo section*/
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+article:first-of-type figure:nth-of-type(1) { /* primer figure del primer article*/
+    background-image: url(recursos/img/ondas.jpg);
+    border: 10px solid rgba(200, 200, 200, 0.4); /* borde opaco*/
+    margin: 0;
+    height: 100px;
+    background-size: cover; /* se ajusta al tamaño */
+    background-repeat: no-repeat; /* no se repite*/
+    
+}
+
+article { /* caracteristicas de todos losa article*/
+    width: 31%;
+    margin: 0;
+    display: inline-block;
+
+}
+
+article:first-of-type { /* caracteristicas del primer article*/
+    margin-left: 20px;
+}
+
+
+article p  { /* caracteristicas de los <p> dentro de un article*/
+    margin-top: -13px;
+    font-family: 'Arial', sans-serif;
+    color: grey;
+}
+
+article span { /* caracteristicas de los <span> dentro de los article*/
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);;
+    width: 94%;
+    height: 30px;
+    text-align: center left; /* el texto se coloca abajo y centrado*/
+    line-height: 30px; /* Alinea verticalmente el texto en el centro */
+    padding-left: 17px; 
+    font-family: 'Arial', sans-serif;
+}
+
+section article figure { /* caracteristicas del los <figure> dentro de una article*/
+    position: relative; 
+}
+
+article:nth-of-type(n + 2) { /* caracteristicas de los articles exceptuando al primero*/
+    margin-left: 10px;
+}
+
+article:nth-of-type(2) figure { /* caracteristicas del <figure> dentro del segundo article */
+    background-image: url(recursos/img/primer.jpg);
+    border: 10px solid rgba(200, 200, 200, 0.4);
+    margin: 0;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ header h2 { /* caracteristicas de un h2 dentro de un header */
+    color: darkorange;
+    margin-top: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+article:last-of-type figure { /* caracteristicas del <figure> dentro del ultimoa article ( el tecero) */
+    border: 10px solid rgba(200, 200, 200, 0.4);
+    margin: 0;
+    height: 100px;
+    overflow: hidden; /* lo que se desborda no se ve*/
+}
+
+article:last-of-type figure video { /* el video del ultimo article*/
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+aside { /* caracteristicas de <aside> */
+    background-color: rgba(180, 180, 180, 0.7);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+
+aside h2 { /* caracteristicas del <h2> del aside*/
+    color: darkorange;
+    font-family: 'American Typewriter', serif;
+    margin: 0;
+    text-align: left;
+    margin-left: 30px;
+
+}
+
+form { /* caracteristicas de los formularios*/
+    margin-left: 55px;
+    color: grey;
+}
+
+form input[type="text"] { /* caracteristicas de un input el cual sea de tipo "text" */
+    height: 20px;
+    width: 180px;
+}
+
+form:last-of-type { /* caracteristicas del ultimo formulario*/
+    margin-left: 20px;
+}
+form label { /* caracteristicas de los label*/
+    font-family: 'American Typewriter', serif;
+}
+
+aside > div { /* caracteristicas de un div hijo de aside*/ 
+    border: 1px solid orangered;
+    border-radius: 20px 20px 20px 20px; 
+    background-color: orangered;
+    height: 45px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 180px;
+    box-shadow: inset 5px 5px 5px  rgba(0, 0, 0, 0.5); /* Sombra interna (inset) */
+    
+}
+
+aside > div > span{ /* caracteristicas de span hijo de div, el cual es hijo de span*/
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'American Typewriter', serif;
+}
+
+footer p { /* parrafo del footer*/
+    color: black;
+}
+
+span nav p { /* esto es lo que aparece encimma de la imagen de los relojes */
+    font-family: 'Georgia', sans-serif;
+    background-color: rgba(135, 206, 250, 0.5);
+    font-size: 21px;
+    margin-left: -24px;
+    height: 40px;
+    border-radius: 0px 20px 20px 0px;
+    width: 200px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+span nav p:nth-of-type(2){ /* segundo parrafo del nav*/
+    background-color: rgba(255, 0, 0, 0.5);
+    margin-top: -10px;
+}
+
+span nav p:nth-of-type(3){ /* tercero*/
+    background-color: rgba(255, 165, 0, 0.5);
+    margin-top: -10px;
+}
+
+span nav p:nth-of-type(4){ /* cuarto */
+    background-color: rgba(139, 69, 19, 0.5);
+    margin-top: -10px;
+}
+
+span nav p:nth-of-type(5){ /* quinto */
+    background-color: rgba(255, 255, 0, 0.5);
+    margin-top: -10px;
+}
+
+.pizza { /* caracteristicas para el icono de pizza */
+    background-image: url(recursos/img/pizza.png);
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
+    background-size: cover; 
+    margin-top: 8px;
+    margin-left: 35px;
+}
+
+.camisa { /* caracteristicas para el icono de camiseta */
+    background-image: url(recursos/img/camiseta.png);
+    width: 25px;
+    height: 25px; 
+    background-size: cover; 
+    margin-top: 8px;
+    margin-left: 33px;
+}
+
+.vader { /* caracteristicas para el icono de vader */
+    background-image: url(recursos/img/vader.png);
+    width: 30px;
+    height: 25px; 
+    background-size: cover; 
+    margin-top: 8px;
+    margin-left: 65px;
+}
+
+.nucelarLisaNuucelar { /* caracteristicas para el icono de nucelar */
+    background-image: url(recursos/img/nucelar.png);
+    width: 25px;
+    height: 28px; 
+    background-size: cover; 
+    margin-top: 7px;
+    margin-left: 95px;
+}
+ 
+.tirita { /* caracteristicas para el icono de tirita */
+    background-image: url(recursos/img/tirita.png);
+    width: 25px;
+    height: 25px; 
+    background-size: cover; 
+    margin-top: 8px;
+    margin-left: 63px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+font-family: 'Dancing Script', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Lobster', sans-serif;
